@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        
+        <style>
+            body{
+                margin:0px;
+            }
+            #div1{
+                width:100vw;
+                height:100px;
+                background-color: black;
+                color:white;
+                border:2px solid white;
+                box-sizing: border-box;
+            }
+            table,td{
+                position: relative;
+                left:0vw;
+                border-collapse:collapse;
+                border:2px solid black;
+                text-align:center;
+                padding:10px;
+                font-size:20px;
+                font-weight:900;
+                box-sizing:border-box;
+            }
+            table{
+                width:100vw;
+            }
+            td:hover{
+                background-color: gray;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <div id="div1">
+            </div>
+            <table>
+               
+                
+                <tr>
+                    <td onclick="set(this.innerHTML)">
+                        x<sup>2</sup>
+                    </td>
+                    
+                    <td>
+                        C
+                    </td>
+                    
+                    <td>
+                        <i class="fas fa-backspace"></i>
+                    </td>
+                    
+                    <td>
+                        &#xf7;
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td onclick="set(this.innerHTML)">
+                        7
+                    </td>
+                    
+                    <td onclick="set(this.innerHTML)">
+                        8
+                    </td>
+                    
+                    <td onclick="set(this.innerHTML)">
+                        9
+                    </td>
+                    
+                    <td onclick="set(this.innerHTML)">
+                        *
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        4
+                    </td>
+                    
+                    <td>
+                        5
+                    </td>
+                    
+                    <td>
+                        6
+                    </td>
+                    
+                    <td>
+                        -
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        1
+                    </td>
+                    
+                    <td>
+                        2
+                    </td>
+                    
+                    <td>
+                        3
+                    </td>
+                    
+                    <td>
+                        +
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        %
+                    </td>
+                    
+                    <td>
+                        0
+                    </td>
+                    
+                    <td>
+                        .
+                    </td>
+                    
+                    <td onclick="get()">
+                        =
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <p id="str"></p>
+            <script>
+               var x=null,y=0;
+                function set(a){
+                    x=a;
+                   y=""+(document.getElementById("str").innerHTML+=x)+"";
+                    }
+                 function get(){
+                      alert(eval(y));}
+            </script>
+    </body>
+</html>
